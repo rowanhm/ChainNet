@@ -1,0 +1,866 @@
+[
+    {
+        "word": "reservoir",
+        "sense": "reservoir%1:23:00::",
+        "feature_clusters": [
+            [
+                "annotator02:reservoir:2_1:1",
+                "annotator02:reservoir:2_3:1",
+                "annotator01:reservoir:2_0:1"
+            ],
+            [
+                "annotator02:reservoir:2_0:1",
+                "annotator01:reservoir:2_1:1"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:reservoir:2_2:1"
+        ]
+    },
+    {
+        "word": "reservoir",
+        "sense": "reservoir%1:06:00::",
+        "feature_clusters": [
+            [
+                "annotator02:reservoir:2_0:3",
+                "annotator01:reservoir:2_1:3"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:reservoir:2_3:3",
+            "annotator02:reservoir:2_2:3",
+            "annotator02:reservoir:2_1:3",
+            "annotator01:reservoir:2_0:3"
+        ]
+    },
+    {
+        "word": "reservoir",
+        "sense": "reservoir%1:17:00::",
+        "feature_clusters": [
+            [
+                "annotator02:reservoir:2_0:4",
+                "annotator01:reservoir:2_1:4"
+            ],
+            [
+                "annotator01:reservoir:2_0:4",
+                "annotator02:reservoir:2_1:4"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:reservoir:2_2:4",
+            "annotator02:reservoir:2_3:4"
+        ]
+    },
+    {
+        "word": "distribution",
+        "sense": "distribution%1:09:00::",
+        "feature_clusters": [
+            [
+                "annotator02:distribution:2_0:1",
+                "annotator01:distribution:2_0:1"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:distribution:2_1:1"
+        ]
+    },
+    {
+        "word": "seat",
+        "sense": "seat%1:06:00::",
+        "feature_clusters": [
+            [
+                "annotator02:seat:3_0:4",
+                "annotator01:seat:3_1:4"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:seat:3_1:4",
+            "annotator01:seat:3_0:4"
+        ]
+    },
+    {
+        "word": "seat",
+        "sense": "seat%1:06:03::",
+        "feature_clusters": [
+            [
+                "annotator02:seat:3_0:8",
+                "annotator01:seat:3_0:8",
+                "annotator01:seat:3_1:8"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:seat:3_1:8"
+        ]
+    },
+    {
+        "word": "can",
+        "sense": "can%1:06:03::",
+        "feature_clusters": [],
+        "excluded_features": [
+            "annotator02:can:1_1:5",
+            "annotator02:can:1_2:5",
+            "annotator02:can:1_0:5",
+            "annotator01:can:1_0:5"
+        ]
+    },
+    {
+        "word": "landmark",
+        "sense": "landmark%1:11:00::",
+        "feature_clusters": [
+            [
+                "annotator01:landmark:1_1:2",
+                "annotator02:landmark:1_0:2"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:landmark:1_1:2",
+            "annotator01:landmark:1_0:2"
+        ]
+    },
+    {
+        "word": "landmark",
+        "sense": "landmark%1:08:00::",
+        "feature_clusters": [
+            [
+                "annotator02:landmark:1_0:4",
+                "annotator01:landmark:1_1:4"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:landmark:1_1:4",
+            "annotator01:landmark:1_0:4"
+        ]
+    },
+    {
+        "word": "joint",
+        "sense": "joint%1:06:01::",
+        "feature_clusters": [
+            [
+                "annotator02:joint:1_1:5",
+                "annotator02:joint:1_0:5",
+                "annotator01:joint:1_0:5",
+                "annotator01:joint:1_1:5"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "programme",
+        "sense": "programme%1:09:00::",
+        "feature_clusters": [
+            [
+                "annotator02:programme:1_1:6",
+                "annotator02:programme:1_0:6",
+                "annotator01:programme:1_0:6"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "birth",
+        "sense": "birth%1:28:00::",
+        "feature_clusters": [
+            [
+                "annotator02:birth:2_0:1",
+                "annotator01:birth:2_0:1"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "brute",
+        "sense": "brute%1:03:00::",
+        "feature_clusters": [
+            [
+                "annotator02:brute:1_0:2",
+                "annotator01:brute:1_0:2"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:brute:1_1:2",
+            "annotator01:brute:1_1:2"
+        ]
+    },
+    {
+        "word": "marquee",
+        "sense": "marquee%1:06:00::",
+        "feature_clusters": [],
+        "excluded_features": [
+            "annotator02:marquee:1_1:2",
+            "annotator02:marquee:1_0:2",
+            "annotator01:marquee:1_0:2",
+            "annotator01:marquee:1_1:2"
+        ]
+    },
+    {
+        "word": "motor",
+        "sense": "motor%1:17:00::",
+        "feature_clusters": [
+            [
+                "annotator02:motor:1_0:2",
+                "annotator01:motor:1_1:2"
+            ],
+            [
+                "annotator02:motor:1_1:2",
+                "annotator01:motor:1_0:2"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "hour",
+        "sense": "hour%1:28:02::",
+        "feature_clusters": [
+            [
+                "annotator02:hour:1_2:3",
+                "annotator01:hour:1_1:3"
+            ],
+            [
+                "annotator02:hour:1_0:3",
+                "annotator01:hour:1_0:3"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:hour:1_1:3"
+        ]
+    },
+    {
+        "word": "twin",
+        "sense": "twin%1:17:00::",
+        "feature_clusters": [
+            [
+                "annotator02:twin:1_1:3",
+                "annotator01:twin:1_1:3"
+            ],
+            [
+                "annotator02:twin:1_0:3",
+                "annotator01:twin:1_2:3"
+            ],
+            [
+                "annotator02:twin:1_2:3",
+                "annotator01:twin:1_0:3"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "twin",
+        "sense": "twin%1:06:00::",
+        "feature_clusters": [
+            [
+                "annotator02:twin:1_2:4",
+                "annotator01:twin:1_0:4"
+            ],
+            [
+                "annotator01:twin:1_1:4",
+                "annotator02:twin:1_1:4"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:twin:1_0:4",
+            "annotator01:twin:1_2:4"
+        ]
+    },
+    {
+        "word": "pilot",
+        "sense": "pilot%1:18:01::",
+        "feature_clusters": [
+            [
+                "annotator02:pilot:1_1:2",
+                "annotator01:pilot:1_0:2"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:pilot:1_0:2",
+            "annotator01:pilot:1_1:2"
+        ]
+    },
+    {
+        "word": "pilot",
+        "sense": "pilot%1:09:00::",
+        "feature_clusters": [
+            [
+                "annotator02:pilot:3_1:4",
+                "annotator01:pilot:3_0:4"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:pilot:3_0:4"
+        ]
+    },
+    {
+        "word": "alpha",
+        "sense": "alpha%1:11:00::",
+        "feature_clusters": [
+            [
+                "annotator01:alpha:1_0:2",
+                "annotator02:alpha:1_0:2"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:alpha:1_1:2"
+        ]
+    },
+    {
+        "word": "landslide",
+        "sense": "landslide%1:11:01::",
+        "feature_clusters": [
+            [
+                "annotator02:landslide:2_1:1",
+                "annotator01:landslide:2_0:1",
+                "annotator02:landslide:2_0:1"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "axis",
+        "sense": "axis%1:09:00::",
+        "feature_clusters": [
+            [
+                "annotator02:axis:6_0:1",
+                "annotator01:axis:6_0:1"
+            ],
+            [
+                "annotator02:axis:6_1:1",
+                "annotator01:axis:6_1:1"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:axis:6_2:1",
+            "annotator01:axis:6_2:1"
+        ]
+    },
+    {
+        "word": "axis",
+        "sense": "axis%1:20:00::",
+        "feature_clusters": [
+            [
+                "annotator02:axis:6_0:2",
+                "annotator01:axis:6_0:2"
+            ],
+            [
+                "annotator01:axis:6_1:2",
+                "annotator02:axis:6_1:2"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:axis:6_2:2",
+            "annotator01:axis:6_2:2"
+        ]
+    },
+    {
+        "word": "programme",
+        "sense": "programme%1:04:00::",
+        "feature_clusters": [
+            [
+                "annotator02:programme:3_2:7",
+                "annotator01:programme:3_1:7"
+            ],
+            [
+                "annotator01:programme:3_0:7",
+                "annotator02:programme:3_1:7"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:programme:3_0:7"
+        ]
+    },
+    {
+        "word": "convection",
+        "sense": "convection%1:22:02::",
+        "feature_clusters": [
+            [
+                "annotator02:convection:1_1:2",
+                "annotator01:convection:1_0:2"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:convection:1_0:2"
+        ]
+    },
+    {
+        "word": "rubber",
+        "sense": "rubber%1:27:01::",
+        "feature_clusters": [
+            [
+                "annotator02:rubber:1_1:2",
+                "annotator01:rubber:1_0:2"
+            ],
+            [
+                "annotator02:rubber:1_0:2",
+                "annotator01:rubber:1_1:2"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "history",
+        "sense": "history%1:28:02::",
+        "feature_clusters": [
+            [
+                "annotator02:history:1_0:4",
+                "annotator01:history:1_0:4",
+                "annotator01:history:1_1:4"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "element",
+        "sense": "element%1:26:00::",
+        "feature_clusters": [
+            [
+                "annotator02:element:1_1:2:5:4:6",
+                "annotator01:element:4_1:6"
+            ]
+        ],
+        "excluded_features": [
+            "annotator01:element:4_0:6"
+        ]
+    },
+    {
+        "word": "mirage",
+        "sense": "mirage%1:09:00::",
+        "feature_clusters": [
+            [
+                "annotator02:mirage:1_1:2",
+                "annotator01:mirage:1_1:2"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:mirage:1_0:2",
+            "annotator01:mirage:1_0:2"
+        ]
+    },
+    {
+        "word": "drone",
+        "sense": "drone%1:05:00::",
+        "feature_clusters": [],
+        "excluded_features": [
+            "annotator02:drone:4_3:1",
+            "annotator02:drone:4_1:1",
+            "annotator02:drone:4_2:1",
+            "annotator02:drone:4_0:1",
+            "annotator01:drone:4_0:1"
+        ]
+    },
+    {
+        "word": "possession",
+        "sense": "possession%1:07:00::",
+        "feature_clusters": [
+            [
+                "annotator02:possession:1_0:6",
+                "annotator01:possession:1_0:6"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "individual",
+        "sense": "individual%1:18:00::",
+        "feature_clusters": [
+            [
+                "annotator02:individual:1_1:2",
+                "annotator01:individual:1_1:2"
+            ],
+            [
+                "annotator02:individual:1_0:2",
+                "annotator01:individual:1_0:2"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "jam",
+        "sense": "jam%1:14:00::",
+        "feature_clusters": [
+            [
+                "annotator02:jam:1_0:3",
+                "annotator01:jam:1_2:3",
+                "annotator02:jam:1_2:3"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:jam:1_1:3",
+            "annotator01:jam:1_0:3",
+            "annotator01:jam:1_1:3"
+        ]
+    },
+    {
+        "word": "needle",
+        "sense": "needle%1:20:00::",
+        "feature_clusters": [
+            [
+                "annotator02:needle:3_1:1",
+                "annotator01:needle:3_0:1"
+            ],
+            [
+                "annotator02:needle:3_0:1",
+                "annotator01:needle:3_1:1"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "horror",
+        "sense": "horror%1:12:00::",
+        "feature_clusters": [
+            [
+                "annotator02:horror:1_0:3",
+                "annotator01:horror:1_0:3"
+            ],
+            [
+                "annotator02:horror:1_1:3",
+                "annotator01:horror:1_1:3"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "tension",
+        "sense": "tension%1:26:03::",
+        "feature_clusters": [
+            [
+                "annotator02:tension:2_0:1",
+                "annotator01:tension:2_0:1"
+            ],
+            [
+                "annotator02:tension:2_1:1",
+                "annotator01:tension:2_1:1",
+                "annotator01:tension:2_2:1"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "tension",
+        "sense": "tension%1:26:02::",
+        "feature_clusters": [
+            [
+                "annotator02:tension:2_1:3",
+                "annotator01:tension:2_1:3"
+            ],
+            [
+                "annotator02:tension:2_0:3",
+                "annotator01:tension:2_0:3"
+            ]
+        ],
+        "excluded_features": [
+            "annotator01:tension:2_2:3"
+        ]
+    },
+    {
+        "word": "tension",
+        "sense": "tension%1:26:00::",
+        "feature_clusters": [
+            [
+                "annotator02:tension:2_0:5",
+                "annotator01:tension:2_0:5"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:tension:2_1:5",
+            "annotator01:tension:2_2:5",
+            "annotator01:tension:2_1:5"
+        ]
+    },
+    {
+        "word": "monster",
+        "sense": "monster%1:18:03::",
+        "feature_clusters": [
+            [
+                "annotator02:monster:1_4:2",
+                "annotator01:monster:1_2:2"
+            ],
+            [
+                "annotator01:monster:1_1:2",
+                "annotator02:monster:1_1:2"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:monster:1_2:2",
+            "annotator02:monster:1_3:2",
+            "annotator02:monster:1_0:2",
+            "annotator01:monster:1_0:2"
+        ]
+    },
+    {
+        "word": "monster",
+        "sense": "monster%1:18:01::",
+        "feature_clusters": [
+            [
+                "annotator02:monster:1_2:3",
+                "annotator01:monster:1_0:3"
+            ],
+            [
+                "annotator01:monster:1_1:3",
+                "annotator02:monster:1_1:3"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:monster:1_3:3",
+            "annotator02:monster:1_4:3",
+            "annotator02:monster:1_0:3",
+            "annotator01:monster:1_2:3"
+        ]
+    },
+    {
+        "word": "monster",
+        "sense": "monster%1:18:00::",
+        "feature_clusters": [
+            [
+                "annotator01:monster:1_2:4",
+                "annotator02:monster:1_4:4"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:monster:1_0:4",
+            "annotator02:monster:1_3:4",
+            "annotator02:monster:1_1:4",
+            "annotator02:monster:1_2:4",
+            "annotator01:monster:1_0:4",
+            "annotator01:monster:1_1:4"
+        ]
+    },
+    {
+        "word": "monster",
+        "sense": "monster%1:05:00::",
+        "feature_clusters": [
+            [
+                "annotator01:monster:1_2:5",
+                "annotator02:monster:1_4:5"
+            ],
+            [
+                "annotator02:monster:1_2:5",
+                "annotator01:monster:1_0:5"
+            ],
+            [
+                "annotator02:monster:1_1:5",
+                "annotator01:monster:1_1:5"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:monster:1_3:5",
+            "annotator02:monster:1_0:5"
+        ]
+    },
+    {
+        "word": "descent",
+        "sense": "descent%1:24:00::",
+        "feature_clusters": [
+            [
+                "annotator02:descent:1_0:4",
+                "annotator01:descent:1_0:4"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:descent:1_1:4"
+        ]
+    },
+    {
+        "word": "mouth",
+        "sense": "mouth%1:17:01::",
+        "feature_clusters": [
+            [
+                "annotator02:mouth:1_0:3",
+                "annotator01:mouth:1_1:3"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:mouth:1_1:3",
+            "annotator02:mouth:1_2:3",
+            "annotator01:mouth:1_2:3",
+            "annotator01:mouth:1_0:3"
+        ]
+    },
+    {
+        "word": "mouth",
+        "sense": "mouth%1:17:00::",
+        "feature_clusters": [
+            [
+                "annotator02:mouth:1_0:4",
+                "annotator01:mouth:1_1:4",
+                "annotator02:mouth:1_1:4"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:mouth:1_2:4",
+            "annotator01:mouth:1_0:4",
+            "annotator01:mouth:1_2:4"
+        ]
+    },
+    {
+        "word": "mouth",
+        "sense": "mouth%1:06:00::",
+        "feature_clusters": [
+            [
+                "annotator02:mouth:1_0:8",
+                "annotator02:mouth:1_2:8",
+                "annotator01:mouth:1_1:8"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:mouth:1_1:8",
+            "annotator01:mouth:1_2:8",
+            "annotator01:mouth:1_0:8"
+        ]
+    },
+    {
+        "word": "tongue",
+        "sense": "tongue%1:25:00::",
+        "feature_clusters": [
+            [
+                "annotator02:tongue:1_3:3",
+                "annotator01:tongue:1_0:3"
+            ],
+            [
+                "annotator02:tongue:1_0:3",
+                "annotator01:tongue:1_1:3"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:tongue:1_2:3",
+            "annotator02:tongue:1_4:3",
+            "annotator02:tongue:1_1:3"
+        ]
+    },
+    {
+        "word": "tongue",
+        "sense": "tongue%1:17:00::",
+        "feature_clusters": [
+            [
+                "annotator02:tongue:1_0:5",
+                "annotator01:tongue:1_1:5"
+            ],
+            [
+                "annotator01:tongue:1_0:5",
+                "annotator02:tongue:1_1:5",
+                "annotator02:tongue:1_3:5"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:tongue:1_2:5",
+            "annotator02:tongue:1_4:5"
+        ]
+    },
+    {
+        "word": "tongue",
+        "sense": "tongue%1:06:00::",
+        "feature_clusters": [
+            [
+                "annotator01:tongue:1_1:7",
+                "annotator02:tongue:1_0:7"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:tongue:1_2:7",
+            "annotator02:tongue:1_3:7",
+            "annotator02:tongue:1_4:7",
+            "annotator02:tongue:1_1:7",
+            "annotator01:tongue:1_0:7"
+        ]
+    },
+    {
+        "word": "tongue",
+        "sense": "tongue%1:06:01::",
+        "feature_clusters": [
+            [
+                "annotator02:tongue:1_0:8",
+                "annotator01:tongue:1_1:8"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:tongue:1_2:8",
+            "annotator02:tongue:1_3:8",
+            "annotator02:tongue:1_4:8",
+            "annotator02:tongue:1_1:8",
+            "annotator01:tongue:1_0:8"
+        ]
+    },
+    {
+        "word": "agonist",
+        "sense": "agonist%1:18:00::",
+        "feature_clusters": [],
+        "excluded_features": [
+            "annotator02:agonist:1_2:2",
+            "annotator02:agonist:1_0:2",
+            "annotator02:agonist:1_1:2",
+            "annotator01:agonist:1_0:2"
+        ]
+    },
+    {
+        "word": "battle",
+        "sense": "battle%1:04:01::",
+        "feature_clusters": [
+            [
+                "annotator01:battle:1_0:2",
+                "annotator02:battle:1_2:2"
+            ],
+            [
+                "annotator02:battle:1_1:2",
+                "annotator02:battle:1_0:2",
+                "annotator01:battle:1_1:2"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "battle",
+        "sense": "battle%1:04:02::",
+        "feature_clusters": [
+            [
+                "annotator01:battle:1_0:3",
+                "annotator02:battle:1_2:3"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:battle:1_0:3",
+            "annotator02:battle:1_1:3",
+            "annotator01:battle:1_1:3"
+        ]
+    },
+    {
+        "word": "reproduction",
+        "sense": "reproduction%1:04:01::",
+        "feature_clusters": [
+            [
+                "annotator02:reproduction:1_0:4",
+                "annotator01:reproduction:1_0:4"
+            ]
+        ],
+        "excluded_features": []
+    },
+    {
+        "word": "iris",
+        "sense": "iris%1:06:00::",
+        "feature_clusters": [
+            [
+                "annotator01:iris:2_1:3",
+                "annotator02:iris:1_0:2:3"
+            ],
+            [
+                "annotator01:iris:2_0:3",
+                "annotator02:iris:2_0:3"
+            ]
+        ],
+        "excluded_features": [
+            "annotator02:iris:1_1:2:3"
+        ]
+    },
+    {
+        "word": "pilot",
+        "sense": "pilot%1:06:01::",
+        "feature_clusters": [
+            [
+                "annotator02:pilot:3_1:6",
+                "annotator01:pilot:3_0:6"
+            ],
+            [
+                "annotator02:pilot:3_0:6",
+                "annotator01:pilot:3_1:6"
+            ]
+        ],
+        "excluded_features": []
+    }
+]
