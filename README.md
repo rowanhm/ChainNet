@@ -4,7 +4,7 @@
 * By downloading [this JSON file](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet.json). 
 This file contains of all of ChainNet is one place. 
 Details of its structure are given below.
-* By downloading one of three simplified versions, which contain only [metaphor](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/metaphor.json), [metonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/metonymy.json), or [homonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/homonymy.json).
+* By downloading one of three simplified versions, which contain only [metaphor](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_metaphor.json), [metonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_metonymy.json), or [homonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_homonymy.json).
 These simplified versions exclude split and virtual senses, and have been designed to make it easy to access all of the examples of each phenomena without having to extract them yourselves.
 * By looking at [this automatically-generated PDF](https://rowanhm.github.io/ChainNet/documentation/ChainNet_Data.pdf), which includes graphical representations of every word in ChainNet, but does not include the feature transformations.
 It can be useful if you want to quickly reference ChainNet annotation for a word.

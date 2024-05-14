@@ -4,7 +4,9 @@ from python.common.common import info, open_json, safe_lemma_from_key, save_json
 from python.datatypes.sense_label import SenseLabel
 
 info('Loading data')
-chainnet = open_chainnet()
+chainnet = open_json('data/chainnet.json')
+version = chainnet['metadata']['version']
+chainnet = chainnet['content']
 
 info('Processing into form')
 all_data = {}
@@ -96,9 +98,18 @@ for word_data in chainnet:
 info('Extracting types')
 
 info('Saving')
-# save_json('data/chainnet_simplified.json', all_data)
-save_json('data/chainnet_simple/metaphor.json', connections['metaphor'])
-save_json('data/chainnet_simple/metonymy.json', connections['metonymy'])
-save_json('data/chainnet_simple/homonymy.json', homonymy_data)
+
+def wrap_data(data):
+    return {
+        'metadata': {
+            'author': "Rowan Hall Maudslay",
+            'version': str(version)
+        },
+        'content': data
+    }
+
+save_json('data/chainnet_simple/chainnet_metaphor.json', wrap_data(connections['metaphor']))
+save_json('data/chainnet_simple/chainnet_metonymy.json', wrap_data(connections['metonymy']))
+save_json('data/chainnet_simple/chainnet_homonymy.json', wrap_data(homonymy_data))
 
 info('Done')
