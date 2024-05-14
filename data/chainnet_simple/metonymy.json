@@ -167,17 +167,7 @@
     {
         "wordform": "situation",
         "from_sense": "situation%1:26:00::",
-        "to_sense": "situation%1:26:01::"
-    },
-    {
-        "wordform": "situation",
-        "from_sense": "situation%1:26:00::",
         "to_sense": "situation%1:26:02::"
-    },
-    {
-        "wordform": "situation",
-        "from_sense": "situation%1:26:00::",
-        "to_sense": "situation%1:15:00::"
     },
     {
         "wordform": "superior",
@@ -241,8 +231,8 @@
     },
     {
         "wordform": "process",
-        "from_sense": "process%1:04:00::",
-        "to_sense": "process%1:09:00::"
+        "from_sense": "process%1:03:00::",
+        "to_sense": "process%1:08:00::"
     },
     {
         "wordform": "bag",
@@ -263,11 +253,6 @@
         "wordform": "bag",
         "from_sense": "bag%1:06:00::",
         "to_sense": "bag%1:06:01::"
-    },
-    {
-        "wordform": "bag",
-        "from_sense": "bag%1:06:00::",
-        "to_sense": "bag%1:05:00::"
     },
     {
         "wordform": "bosom",
@@ -291,8 +276,8 @@
     },
     {
         "wordform": "zaire",
-        "from_sense": "zaire%1:23:00::",
-        "to_sense": "zaire%1:15:00::"
+        "from_sense": "zaire%1:15:00::",
+        "to_sense": "zaire%1:23:00::"
     },
     {
         "wordform": "backup",
@@ -356,8 +341,8 @@
     },
     {
         "wordform": "programme",
-        "from_sense": "programme%1:09:00::",
-        "to_sense": "programme%1:10:02::"
+        "from_sense": "programme%1:10:00::",
+        "to_sense": "programme%1:04:00::"
     },
     {
         "wordform": "tummy",
@@ -450,6 +435,11 @@
         "to_sense": "title%1:10:03::"
     },
     {
+        "wordform": "twin",
+        "from_sense": "twin%1:18:00::",
+        "to_sense": "twin%1:18:01::"
+    },
+    {
         "wordform": "assessment",
         "from_sense": "assessment%1:09:00::",
         "to_sense": "assessment%1:21:00::"
@@ -473,11 +463,6 @@
         "wordform": "middle",
         "from_sense": "middle%1:15:00::",
         "to_sense": "middle%1:08:00::"
-    },
-    {
-        "wordform": "middle",
-        "from_sense": "middle%1:09:00::",
-        "to_sense": "middle%1:28:00::"
     },
     {
         "wordform": "advantage",
@@ -528,6 +513,16 @@
         "wordform": "facility",
         "from_sense": "facility%1:04:01::",
         "to_sense": "facility%1:04:00::"
+    },
+    {
+        "wordform": "ford",
+        "from_sense": "ford%1:18:03::",
+        "to_sense": "ford%1:18:04::"
+    },
+    {
+        "wordform": "ford",
+        "from_sense": "ford%1:18:00::",
+        "to_sense": "ford%1:18:03::"
     },
     {
         "wordform": "ford",
@@ -863,6 +858,11 @@
         "wordform": "crossbar",
         "from_sense": "crossbar%1:06:00::",
         "to_sense": "crossbar%1:06:01::"
+    },
+    {
+        "wordform": "drone",
+        "from_sense": "drone%1:10:00::",
+        "to_sense": "drone%1:05:00::"
     },
     {
         "wordform": "drone",
@@ -1221,7 +1221,7 @@
     },
     {
         "wordform": "seat",
-        "from_sense": "seat%1:15:00::",
+        "from_sense": "seat%1:06:01::",
         "to_sense": "seat%1:07:00::"
     },
     {
@@ -1253,11 +1253,6 @@
         "wordform": "vent",
         "from_sense": "vent%1:06:00::",
         "to_sense": "vent%1:17:00::"
-    },
-    {
-        "wordform": "worship",
-        "from_sense": "worship%1:04:00::",
-        "to_sense": "worship%1:12:01::"
     },
     {
         "wordform": "antecedent",
@@ -1331,12 +1326,12 @@
     },
     {
         "wordform": "element",
-        "from_sense": "element%1:27:00::",
-        "to_sense": "element%1:27:01::"
+        "from_sense": "element%1:27:01::",
+        "to_sense": "element%1:26:00::"
     },
     {
         "wordform": "element",
-        "from_sense": "element%1:06:00::",
+        "from_sense": "element%1:09:00::",
         "to_sense": "element%1:25:00::"
     },
     {
@@ -1456,28 +1451,28 @@
     },
     {
         "wordform": "inventory",
-        "from_sense": "inventory%1:06:00::",
-        "to_sense": "inventory%1:10:00::"
-    },
-    {
-        "wordform": "inventory",
-        "from_sense": "inventory%1:09:00::",
+        "from_sense": "inventory%1:10:00::",
         "to_sense": "inventory%1:06:00::"
     },
     {
         "wordform": "inventory",
-        "from_sense": "inventory%1:09:00::",
+        "from_sense": "inventory%1:10:00::",
         "to_sense": "inventory%1:21:00::"
     },
     {
         "wordform": "inventory",
-        "from_sense": "inventory%1:09:00::",
+        "from_sense": "inventory%1:10:00::",
         "to_sense": "inventory%1:04:00::"
     },
     {
         "wordform": "joint",
         "from_sense": "joint%1:06:01::",
         "to_sense": "joint%1:25:00::"
+    },
+    {
+        "wordform": "joint",
+        "from_sense": "joint%1:08:00::",
+        "to_sense": "joint%1:13:00::"
     },
     {
         "wordform": "spring",
@@ -1526,7 +1521,7 @@
     },
     {
         "wordform": "descent",
-        "from_sense": "descent%1:24:00::",
+        "from_sense": "descent%1:17:00::",
         "to_sense": "descent%1:07:00::"
     },
     {
@@ -1541,7 +1536,7 @@
     },
     {
         "wordform": "descent",
-        "from_sense": "descent%1:24:00::",
+        "from_sense": "descent%1:17:00::",
         "to_sense": "descent%1:14:00::"
     },
     {
@@ -1665,11 +1660,6 @@
         "to_sense": "bat%1:06:02::"
     },
     {
-        "wordform": "bonding",
-        "from_sense": "bonding%1:04:00::",
-        "to_sense": "bonding%1:09:00::"
-    },
-    {
         "wordform": "breeding",
         "from_sense": "breeding%1:04:01::",
         "to_sense": "breeding%1:07:03::"
@@ -1751,17 +1741,22 @@
     },
     {
         "wordform": "birth",
-        "from_sense": "birth%1:11:00::",
-        "to_sense": "birth%1:22:00::"
+        "from_sense": "birth%1:22:00::",
+        "to_sense": "birth%1:28:00::"
     },
     {
         "wordform": "birth",
-        "from_sense": "birth%1:11:00::",
+        "from_sense": "birth%1:22:00::",
+        "to_sense": "birth%1:11:00::"
+    },
+    {
+        "wordform": "birth",
+        "from_sense": "birth%1:22:00::",
         "to_sense": "birth%1:24:00::"
     },
     {
         "wordform": "birth",
-        "from_sense": "birth%1:11:00::",
+        "from_sense": "birth%1:22:00::",
         "to_sense": "birth%1:18:00::"
     },
     {
@@ -1926,7 +1921,7 @@
     },
     {
         "wordform": "escort",
-        "from_sense": "escort%1:18:02::",
+        "from_sense": "escort%1:18:01::",
         "to_sense": "escort%1:04:00::"
     },
     {
@@ -1966,8 +1961,8 @@
     },
     {
         "wordform": "trump",
-        "from_sense": "trump%1:06:02::",
-        "to_sense": "trump%1:06:00::"
+        "from_sense": "trump%1:06:00::",
+        "to_sense": "trump%1:06:02::"
     },
     {
         "wordform": "watershed",
@@ -2113,6 +2108,11 @@
         "wordform": "aisle",
         "from_sense": "aisle%1:06:00::",
         "to_sense": "aisle%1:06:02::"
+    },
+    {
+        "wordform": "chile",
+        "from_sense": "chile%1:15:00::",
+        "to_sense": "chile%1:13:00::"
     },
     {
         "wordform": "convocation",
@@ -2338,11 +2338,6 @@
         "wordform": "history",
         "from_sense": "history%1:28:00::",
         "to_sense": "history%1:09:00::"
-    },
-    {
-        "wordform": "pint",
-        "from_sense": "pint%1:23:03::",
-        "to_sense": "pint%1:23:01::"
     },
     {
         "wordform": "rice",
@@ -3056,6 +3051,11 @@
     },
     {
         "wordform": "tongue",
+        "from_sense": "tongue%1:10:01::",
+        "to_sense": "tongue%1:10:00::"
+    },
+    {
+        "wordform": "tongue",
         "from_sense": "tongue%1:08:00::",
         "to_sense": "tongue%1:10:01::"
     },
@@ -3236,12 +3236,12 @@
     },
     {
         "wordform": "rubber",
-        "from_sense": "rubber%1:27:00::",
+        "from_sense": "rubber%1:27:01::",
         "to_sense": "rubber%1:06:01::"
     },
     {
         "wordform": "rubber",
-        "from_sense": "rubber%1:27:00::",
+        "from_sense": "rubber%1:27:01::",
         "to_sense": "rubber%1:06:00::"
     },
     {
@@ -3912,7 +3912,7 @@
     {
         "wordform": "epoch",
         "from_sense": "epoch%1:28:00::",
-        "to_sense": "epoch%1:28:01::"
+        "to_sense": "epoch%1:28:02::"
     },
     {
         "wordform": "blank",
@@ -4215,16 +4215,6 @@
         "to_sense": "initiative%1:04:00::"
     },
     {
-        "wordform": "lever",
-        "from_sense": "lever%1:06:00::",
-        "to_sense": "lever%1:06:02::"
-    },
-    {
-        "wordform": "lever",
-        "from_sense": "lever%1:06:02::",
-        "to_sense": "lever%1:06:01::"
-    },
-    {
         "wordform": "marine",
         "from_sense": "marine%1:18:01::",
         "to_sense": "marine%1:18:00::"
@@ -4233,11 +4223,6 @@
         "wordform": "rupture",
         "from_sense": "rupture%1:04:00::",
         "to_sense": "rupture%1:26:00::"
-    },
-    {
-        "wordform": "detective",
-        "from_sense": "detective%1:18:00::",
-        "to_sense": "detective%1:18:01::"
     },
     {
         "wordform": "flesh",
@@ -4350,6 +4335,11 @@
         "to_sense": "roost%1:06:00::"
     },
     {
+        "wordform": "sanctuary",
+        "from_sense": "sanctuary%1:06:02::",
+        "to_sense": "sanctuary%1:06:00::"
+    },
+    {
         "wordform": "secession",
         "from_sense": "secession%1:04:00::",
         "to_sense": "secession%1:04:01::"
@@ -4413,6 +4403,11 @@
         "wordform": "basswood",
         "from_sense": "basswood%1:20:02::",
         "to_sense": "basswood%1:20:00::"
+    },
+    {
+        "wordform": "city",
+        "from_sense": "city%1:15:00::",
+        "to_sense": "city%1:15:01::"
     },
     {
         "wordform": "city",
@@ -4670,21 +4665,6 @@
         "to_sense": "possession%1:04:00::"
     },
     {
-        "wordform": "possession",
-        "from_sense": "possession%1:26:00::",
-        "to_sense": "possession%1:16:00::"
-    },
-    {
-        "wordform": "possession",
-        "from_sense": "possession%1:03:00::",
-        "to_sense": "possession%1:15:00::"
-    },
-    {
-        "wordform": "possession",
-        "from_sense": "possession%1:04:00::",
-        "to_sense": "possession%1:04:01::"
-    },
-    {
         "wordform": "appreciation",
         "from_sense": "appreciation%1:04:00::",
         "to_sense": "appreciation%1:10:00::"
@@ -4790,6 +4770,11 @@
         "to_sense": "zinfandel%1:20:00::"
     },
     {
+        "wordform": "brazil",
+        "from_sense": "brazil%1:15:00::",
+        "to_sense": "brazil%1:13:00::"
+    },
+    {
         "wordform": "constant",
         "from_sense": "constant%1:09:00::",
         "to_sense": "constant%1:23:00::"
@@ -4861,18 +4846,8 @@
     },
     {
         "wordform": "camouflage",
-        "from_sense": "camouflage%1:04:00::",
-        "to_sense": "camouflage%1:07:00::"
-    },
-    {
-        "wordform": "camouflage",
-        "from_sense": "camouflage%1:04:00::",
-        "to_sense": "camouflage%1:06:01::"
-    },
-    {
-        "wordform": "camouflage",
-        "from_sense": "camouflage%1:04:00::",
-        "to_sense": "camouflage%1:06:00::"
+        "from_sense": "camouflage%1:07:00::",
+        "to_sense": "camouflage%1:04:00::"
     },
     {
         "wordform": "dissent",
@@ -5026,13 +5001,8 @@
     },
     {
         "wordform": "axis",
-        "from_sense": "axis%1:14:00::",
-        "to_sense": "axis%1:14:01::"
-    },
-    {
-        "wordform": "axis",
-        "from_sense": "axis%1:06:00::",
-        "to_sense": "axis%1:08:00::"
+        "from_sense": "axis%1:09:00::",
+        "to_sense": "axis%1:06:00::"
     },
     {
         "wordform": "breakdown",
@@ -6335,6 +6305,11 @@
         "to_sense": "region%1:15:01::"
     },
     {
+        "wordform": "witch",
+        "from_sense": "witch%1:18:00::",
+        "to_sense": "witch%1:18:03::"
+    },
+    {
         "wordform": "alert",
         "from_sense": "alert%1:10:00::",
         "to_sense": "alert%1:26:00::"
@@ -6501,12 +6476,17 @@
     },
     {
         "wordform": "difficulty",
-        "from_sense": "difficulty%1:26:00::",
+        "from_sense": "difficulty%1:09:02::",
         "to_sense": "difficulty%1:04:00::"
     },
     {
         "wordform": "difficulty",
-        "from_sense": "difficulty%1:26:00::",
+        "from_sense": "difficulty%1:09:02::",
+        "to_sense": "difficulty%1:26:00::"
+    },
+    {
+        "wordform": "difficulty",
+        "from_sense": "difficulty%1:09:02::",
         "to_sense": "difficulty%1:07:00::"
     },
     {
@@ -6990,6 +6970,11 @@
         "to_sense": "college%1:06:00::"
     },
     {
+        "wordform": "deanery",
+        "from_sense": "deanery%1:04:00::",
+        "to_sense": "deanery%1:06:00::"
+    },
+    {
         "wordform": "disagreement",
         "from_sense": "disagreement%1:26:00::",
         "to_sense": "disagreement%1:10:00::"
@@ -7107,6 +7092,11 @@
     {
         "wordform": "wheel",
         "from_sense": "wheel%1:06:00::",
+        "to_sense": "wheel%1:06:01::"
+    },
+    {
+        "wordform": "wheel",
+        "from_sense": "wheel%1:06:00::",
         "to_sense": "wheel%1:06:03::"
     },
     {
@@ -7215,9 +7205,24 @@
         "to_sense": "comb%1:04:00::"
     },
     {
+        "wordform": "dirt",
+        "from_sense": "dirt%1:27:01::",
+        "to_sense": "dirt%1:26:00::"
+    },
+    {
         "wordform": "mouth",
         "from_sense": "mouth%1:08:01::",
         "to_sense": "mouth%1:08:00::"
+    },
+    {
+        "wordform": "mouth",
+        "from_sense": "mouth%1:08:01::",
+        "to_sense": "mouth%1:18:00::"
+    },
+    {
+        "wordform": "mouth",
+        "from_sense": "mouth%1:08:01::",
+        "to_sense": "mouth%1:10:00::"
     },
     {
         "wordform": "tang",
@@ -15691,8 +15696,13 @@
     },
     {
         "wordform": "march",
-        "from_sense": "march%1:14:00::",
-        "to_sense": "march%1:04:00::"
+        "from_sense": "march%1:04:00::",
+        "to_sense": "march%1:14:00::"
+    },
+    {
+        "wordform": "march",
+        "from_sense": "march%1:04:00::",
+        "to_sense": "march%1:10:01::"
     },
     {
         "wordform": "organiser",
@@ -16463,11 +16473,6 @@
         "wordform": "shag",
         "from_sense": "shag%1:17:00::",
         "to_sense": "shag%1:06:00::"
-    },
-    {
-        "wordform": "bridge",
-        "from_sense": "bridge%1:06:00::",
-        "to_sense": "bridge%1:06:05::"
     },
     {
         "wordform": "moiety",

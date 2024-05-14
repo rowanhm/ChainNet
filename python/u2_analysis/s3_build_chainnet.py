@@ -3,7 +3,7 @@ import json
 from python.common.common import open_pickle, info, warn, save_pickle, save_json
 
 
-def get_anno_data(anno_id, filter='base'):
+def get_anno_data(anno_id):
 
     raw_data = open_pickle(f'bin/collection/output/{anno_id}.pkl')
     output = {}
@@ -46,7 +46,7 @@ for queue_id, data in author_data.items():
             chainnet[wordform] = word_data
 
 edit_queues = sorted([q for q in author_data.keys() if 'edits' in q] + ['edits:0.9'], key=lambda x : float(x.split(':')[1].replace('d', '.')))
-assert len(edit_queues) > 1
+assert len(edit_queues) > 0
 
 for queue_id in edit_queues:
 
@@ -54,7 +54,8 @@ for queue_id in edit_queues:
     changed = 0
 
     if queue_id in author_data.keys():
-        for wordform, word_data in data.items():
+        queue_data = author_data[queue_id]
+        for wordform, word_data in queue_data.items():
             assert wordform in chainnet.keys()
             chainnet[wordform] = word_data
             changed += 1

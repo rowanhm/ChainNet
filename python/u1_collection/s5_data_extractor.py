@@ -212,7 +212,7 @@ def main():
         info('Processing queues')
         for queue_id, lemma_ids in queue_ids.items():
 
-            if queue_id == redo_queue or not (username in queue_id or queue_id == 'screener' or 'overlaps' in queue_id):
+            if queue_id == redo_queue or not (username in queue_id or queue_id == 'screener' or 'overlaps' in queue_id or "edits" in queue_id):
                 continue
 
             local_output = {}
