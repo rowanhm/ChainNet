@@ -60,7 +60,13 @@ for queue_id in edit_queues:
             changed += 1
 
     info(f'Saving ChainNet v{version} with a total of {len(chainnet)} words ({changed} changed)')
-    json_output = [word.to_dict() for word_string, word in chainnet.items()]  #sorted([word.to_dict() for word_string, word in chainnet.items()], key=lambda x: x['wordform'])
+    json_output = {
+        'metadata': {
+            'author': "Rowan Hall Maudslay",
+            'version': str(version)
+        },
+        'content': [word.to_dict() for word_string, word in chainnet.items()]
+    }  #sorted([word.to_dict() for word_string, word in chainnet.items()], key=lambda x: x['wordform'])
     save_json(f'data/versions/chainnet_v{version}.json', json_output)
 
 info(f'Saving definitive v{version}')

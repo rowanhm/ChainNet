@@ -1,10 +1,10 @@
 from collections import defaultdict
 
-from python.common.common import info, open_json, safe_lemma_from_key, save_json
+from python.common.common import info, open_json, safe_lemma_from_key, save_json, open_chainnet
 from python.datatypes.sense_label import SenseLabel
 
 info('Loading data')
-chainnet = open_json('data/chainnet.json')
+chainnet = open_chainnet()
 
 info('Processing into form')
 all_data = {}

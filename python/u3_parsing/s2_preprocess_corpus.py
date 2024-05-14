@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 
-from python.common.common import open_pickle, info, save_pickle, open_json, flatten
+from python.common.common import open_pickle, info, save_pickle, open_json, flatten, open_chainnet
 import random
 
 from python.common.global_variables import EDGE_TYPE_MAP, seed
@@ -10,7 +10,7 @@ from python.datatypes.sense_label import SenseLabel
 random.seed(seed)
 
 info('Loading data')
-chainnet = open_json('data/chainnet.json')
+chainnet = open_chainnet()
 vocab = open_pickle('bin/parsing/sense_vocabulary.pkl')
 
 info('Processing into form')

@@ -13,7 +13,8 @@ with open("chainnet.json", "r") as fp:
 ```
 ## Data Format
 
-The ChainNet JSON file is a list with 6500 entries, where each entry corresponds to the annotation for a word. 
+The ChainNet JSON is a dict with two entries, `metadata` and `content`.
+The `content` entry contains a list with 6500 entries, where each entry corresponds to the annotation for a word. 
 Each word is a dictionary, with the following keys:
 * `wordform` The word string.
 * `annotator_id` The unique ID of the annotator who produced the annotation.
