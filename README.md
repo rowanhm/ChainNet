@@ -1,12 +1,12 @@
 # ChainNet
 
 **There are three ways to access the ChainNet data:**
-* By downloading [this JSON file](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet.json). 
+1. By downloading [this JSON file](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet.json). 
 This file contains all of ChainNet is one place. 
-Details of its structure are given below.
-* By downloading one of three simplified versions, which contain only [metaphor](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_metaphor.json), [metonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_metonymy.json), or [homonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_homonymy.json).
-These simplified versions exclude split and virtual senses, and have been designed to make it easy to access all of the examples of each phenomena without having to extract them yourselves.
-* By looking at [this automatically-generated PDF](https://rowanhm.github.io/ChainNet/documentation/ChainNet_Data.pdf), which includes a graphical representation of each word in ChainNet, but does not include the feature transformations.
+Details of its structure are given below. 
+2. By downloading one of three simplified versions, which contain only [metaphor](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_metaphor.json), [metonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_metonymy.json), or [homonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_homonymy.json).
+These simplified versions exclude split and virtual senses, and have been designed to make it easy to access all of the examples of each phenomena without having to extract them yourselves. 
+3. By looking at [this automatically-generated PDF](https://rowanhm.github.io/ChainNet/documentation/ChainNet_Data.pdf), which includes a graphical representation of each word in ChainNet, but does not include the feature transformations.
 It can be useful if you want to reference the ChainNet annotation quickly for a word.
 
 In Python, JSON files can be opened trivially using the `json` library, e.g.
