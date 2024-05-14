@@ -6,7 +6,7 @@ This file contains of all of ChainNet is one place.
 Details of its structure are given below.
 * By downloading one of three simplified versions, which contain only [metaphor](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/metaphor.json), [metonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/metonymy.json), or [homonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/homonymy.json).
 These simplified versions exclude split and virtual senses, and have been designed to make it easy to access all of the examples of each phenomena without having to extract them yourselves.
-* By looking at [this automatically-generated PDF](https://raw.githubusercontent.com/rowanhm/ChainNet/main/documentation/ChainNet_Data.pdf), which includes graphical representations of every word in ChainNet, but does not include the feature transformations.
+* By looking at [this automatically-generated PDF](https://rowanhm.github.io/ChainNet/documentation/ChainNet_Data.pdf), which includes graphical representations of every word in ChainNet, but does not include the feature transformations.
 It can be useful if you want to quickly reference ChainNet annotation for a word.
 
 In Python, each of these JSON files can be opened trivially using the `json` library, e.g.
@@ -72,7 +72,7 @@ Because of this, each stage can be reproduced independently.
 
 ### Annotation Collection
 
-The annotation guidelines are provided [here](https://raw.githubusercontent.com/rowanhm/ChainNet/main/documentation/ChainNet_Annotation_Guidelines.pdf).
+The annotation guidelines are provided [here](https://rowanhm.github.io/ChainNet/documentation/ChainNet_Annotation_Guidelines.pdf).
 These guidelines were written for non-expert annotators.
 Because of this, we referred to prototypes as "core senses" and metonymies as "associations".
 We also used "conduit senses" to bias annotators towards simpler annotations.
