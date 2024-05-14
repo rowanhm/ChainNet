@@ -245,5 +245,8 @@ def chunks(lst, n):
     for i in range(0, len(lst), n):
         yield lst[i:i + n]
 
-def open_chainnet():
-    return open_json('data/chainnet.json')['content']
+def open_chainnet(version=None):
+    if version is None:
+        return open_json('data/chainnet.json')['content']
+    else:
+        return open_json(f'data/versions/chainnet_v{version}.json')['content']

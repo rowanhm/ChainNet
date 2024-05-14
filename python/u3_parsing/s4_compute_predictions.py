@@ -7,7 +7,7 @@ import torch
 from torch.utils.data import DataLoader
 
 from python.common.common import open_pickle, info, save_pickle
-from python.common.global_variables import BATCH_SIZE, seed
+from python.common.global_variables import BATCH_SIZE, seed, device
 from python.u3_parsing.models.edge.biaffine_edge import BiaffineEdge
 from python.u3_parsing.utils.training_utils import simple_collate_fn, initialise_model
 
@@ -55,7 +55,7 @@ for dataset in ['test', 'dev']:
         info(f'Computing {model_name} predictions')
         model = initialise_model(model_name, embeddings)
 
-        model.load_state_dict(torch.load(fp))
+        model.load_state_dict(torch.load(fp, map_location=device))
         model.eval()
 
         # Processing

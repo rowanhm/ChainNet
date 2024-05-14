@@ -1,7 +1,4 @@
-import json
-
-from python.common.common import open_pickle, info, warn, save_pickle, save_json
-
+from python.common.common import open_pickle, info, warn, save_pickle, save_json, open_json
 
 def get_anno_data(anno_id):
 
@@ -37,14 +34,7 @@ for other_annotator in ['annotator02', 'annotator03']:
         if k not in chainnet.keys():
             chainnet[k] = v
 
-# Overriding author edits
 author_data = open_pickle(f'bin/collection/output/author.pkl')
-for queue_id, data in author_data.items():
-    if "overlap" in queue_id:
-        for wordform, word_data in data.items():
-            assert wordform in chainnet.keys()
-            chainnet[wordform] = word_data
-
 edit_queues = sorted([q for q in author_data.keys() if 'edits' in q] + ['edits:0.9'], key=lambda x : float(x.split(':')[1].replace('d', '.')))
 assert len(edit_queues) > 0
 
@@ -52,6 +42,15 @@ for queue_id in edit_queues:
 
     version = queue_id.split(':')[1].replace('d', '.')
     changed = 0
+
+    if version == '1.0':
+        # Overriding overlaps
+        for q_id, data in author_data.items():
+            if "overlap" in q_id:
+                for wordform, word_data in data.items():
+                    assert wordform in chainnet.keys()
+                    chainnet[wordform] = word_data
+                    changed += 1
 
     if queue_id in author_data.keys():
         queue_data = author_data[queue_id]
