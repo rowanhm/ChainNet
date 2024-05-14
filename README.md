@@ -1,10 +1,15 @@
 # ChainNet
 
-**If you just want to access the ChainNet data, it can be found in [this JSON file](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet.json).** 
-We also provide simplified versions, which only contain [metaphor](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/metaphor.json), [metonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/metonymy.json), and [homonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/homonymy.json) data separately.
-These simplified versions exclude split and virtual senses, and have been formatted to make it easy to access all of the examples of each phenomena.
+**There are three ways to access the ChainNet data:**
+* By downloading [this JSON file](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet.json). 
+This file contains of all of ChainNet is one place. 
+Details of its structure are given below.
+* By downloading one of three simplified versions, which contain only [metaphor](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/metaphor.json), [metonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/metonymy.json), or [homonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/homonymy.json).
+These simplified versions exclude split and virtual senses, and have been designed to make it easy to access all of the examples of each phenomena without having to extract them yourselves.
+* By looking at [this automatically-generated PDF](https://raw.githubusercontent.com/rowanhm/ChainNet/main/documentation/ChainNet_Data.pdf), which includes graphical representations of every word in ChainNet, but does not include the feature transformations.
+It can be useful if you want to quickly reference ChainNet annotation for a word.
 
-In Python, each of these JSON files van be opened trivially using the `json` library, e.g.
+In Python, each of these JSON files can be opened trivially using the `json` library, e.g.
 ```angular2html
 import json
 
@@ -12,7 +17,6 @@ with open("chainnet.json", "r") as fp:
     chainnet = json.load(fp)
 ```
 
-Details about the structure of `chainnet.json` can be found below. 
 If you notice any mistakes in the data, or have any suggestions for future versions, please get in touch. 
 
 ## Data Format

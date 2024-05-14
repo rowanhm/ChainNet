@@ -1,200 +1,113 @@
-import os
 from collections import defaultdict
 
-from python.common.common import open_pickle, get_file_list, open_dict_csv, save_text_block, info
+from python.common.common import open_pickle, save_text_block, info, open_json
 
-from nltk.corpus import wordnet as wn
-def main():
+version = open_json('data/chainnet.json')['metadata']['version']
 
-    output = r'''\documentclass[11pt]{article}
-    \setlength{\columnsep}{0.35in}
-    \usepackage[a4paper, margin=0.8in]{geometry}
-    \usepackage{lipsum,mwe,abstract}
-    \usepackage[T1]{fontenc} 
-    \usepackage[english]{babel} 
-    \usepackage{enumitem}
+output = r'''\documentclass[11pt]{article}
+\usepackage[a4paper, margin=0.8in]{geometry}
+\usepackage[T1]{fontenc} 
+\usepackage[english]{babel} 
+\usepackage[dvipsnames]{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage{latexsym}
+\usepackage{tikz}
+\usepackage{tikz-dependency}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{bm}
+\usepackage{adjustbox}
+\usepackage{pifont}
+\usepackage{sectsty} 
+\usepackage{times}
+\sectionfont{\normalfont \Large \scshape}
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{center}
+  {\@title}
+\end{center}\egroup
+}
+\makeatother
 
-    \usepackage{fancyhdr} % Custom headers and footers
-    \pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
-    \fancyhead{} 
-    \fancyfoot[C]{\thepage} % Page numbering for right footer
-    \usepackage{lipsum}
-    \setlength\parindent{4ex} 
-    \usepackage[dvipsnames]{xcolor}
-    \usepackage[normalem]{ulem}
-    \usepackage{multirow}
-    \usepackage{amsmath,amsfonts,amsthm} % Math packages
-    \usepackage{slashed}
-    \usepackage{algorithm}
-    \usepackage{enumitem}
-    \usepackage{latexsym}
+\newcommand{\word}[1]{\textit{#1}}
+\newcommand{\sense}[2]{\text{\word{#1}}{$_#2$}}
+\newcommand{\sensebf}[2]{\textbf{\word{#1}}{$\bm{_#2}$}}
+\newcommand{\synonym}[1]{\textit{#1}}
 
-    %\usepackage[symbol]{footmisc}
+\newcommand{\prototypecolour}{Brown}
+\newcommand{\metonymycolour}{Bittersweet}
+\newcommand{\metaphorcolour}{Purple}
 
-    %\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\newcommand{\prototypelabel}{Prototype}
+\newcommand{\metonymylabel}{Metonymy}
+\newcommand{\metaphorlabel}{Metaphor}
 
-    \usepackage{tikz}
-    \usepackage{tikz-dependency}
+\renewcommand{\footnotesize}{\fontsize{8pt}{9pt}\selectfont}
 
-    \usepackage{pifont}% http://ctan.org/pkg/pifont
-    \newcommand{\cmark}{{\color{Green} \ding{51}}}%
-    \newcommand{\xmark}{{\color{Red} \ding{55}}}%
+\title{
+\Large {ChainNet}\\
+[10pt] 
+}
 
-    \usepackage{wrapfig}
-    \usepackage{graphicx}
-    \usepackage{float}
-    \usepackage[font=small,labelfont=bf]{caption}
-    \usepackage{subcaption}
-    \usepackage{enumitem}
-    \usepackage{cuted}
-    \usepackage{comment}
-    \usepackage{booktabs}
-    \usepackage{sectsty} % Allows customizing section commands
-    %\allsectionsfont{\normalfont \normalsize \scshape} % Section names in small caps and normal fonts
-    \sectionfont{\normalfont \Large \scshape}
-    \subsectionfont{\normalfont \large \rmshape \bfseries}
-    \subsubsectionfont{\normalfont \normalsize \rmshape \bfseries}
+\pgfdeclarelayer{bg}
+\pgfsetlayers{bg,main}
+\pgfkeys{%
+  /tikz/on layer/.code={
+    \pgfonlayer{#1}\begingroup
+    \aftergroup\endpgfonlayer
+    \aftergroup\endgroup
+  }
+}
+\newcommand{\defaultdepth}{0pt}
 
-    \usepackage{makecell}
+\tikzset{definition/.style={align=left, shape=rectangle,draw=black, font={\footnotesize}, fill=black!0!white}}
+\tikzset{prototype_definition/.style={anchor=center, align=left, shape=rectangle,draw=\prototypecolour, font={\footnotesize}, label={[text depth=\defaultdepth,anchor=north west]south west:{\footnotesize{\textcolor{\prototypecolour}{\prototypelabel}}}}, fill=black!0!white, line width=1}}
+\tikzset{metaphor_definition/.style={anchor=center, align=left, shape=rectangle,draw=\metaphorcolour, font={\footnotesize}, label={[text depth=\defaultdepth, anchor=north west]south west:{\footnotesize{\textcolor{\metaphorcolour}{\metaphorlabel}}}}, fill=black!0!white, line width=.3mm}}
+\tikzset{metonymy_definition/.style={anchor=center, align=left, shape=rectangle,draw=\metonymycolour, font={\footnotesize}, label={[text depth=\defaultdepth,anchor=north west]south west:{\footnotesize{\textcolor{\metonymycolour}{\metonymylabel}}}}, fill=black!0!white, line width=.3mm}}
 
-    \renewenvironment{abstract} % Change how the abstract look to remove margins
-     {\small
-      \begin{center}
-      \bfseries \abstractname\vspace{-.5em}\vspace{0pt}
-      \end{center}
-      \list{}{%
-        \setlength{\leftmargin}{0mm}
-        \setlength{\rightmargin}{\leftmargin}%
-      }
-      \item\relax}
-     {\endlist}
+\tikzset{derivation/.style={node distance = 1cm and .5cm}}
+\tikzset{metaphor/.style={->, line width=.3mm, \metaphorcolour, rounded corners=2mm, on layer=bg}}
+\tikzset{metonymy/.style={->, line width=.3mm, \metonymycolour, on layer=bg}}
+\tikzset{start/.style={->, line width=.3mm, \prototypecolour, on layer=bg}}
+\tikzset{split/.style={-, dashed, line width=.3mm, Gray, on layer=bg}}
 
-    \makeatletter
-    \renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt} % Change how the title looks like
-    \begin{flushleft}
-      {\@title}
-      \@author \\ 
-      \@date
-    \end{flushleft}\egroup
-    }
-    \makeatother
+\begin{document}
 
-    \usepackage{times}
-    \usepackage{latexsym}
-    \usepackage{graphicx}
+\onecolumn
+\maketitle
+'''
 
-    %\renewcommand{\UrlFont}{\ttfamily\small}
+output += f'''
+\\paragraph{{ChainNet Version {version}}} The following is an automatically-generated PDF containing every ChainNet annotation.
+Because it was generated automatically, there are likely to be rendering mistakes.
+Each section corresponds to a word.
+The graphical representation is similar to the paper, except that labels are shown on senses, and metonymy edges are curved.
+These changes make it possible to render words with many senses.
+A red star by a section indicates that the annotator did not know that word;
+a red star by a sense ID indicates that the annotator did not know that sense.
+Features are not shown.
+'''
 
-    \usepackage{amsmath}
-    \usepackage[colorlinks=true,allcolors=blue]{hyperref}
+chainnet = open_pickle('bin/analysis/chainnet.pkl')
 
-    \usepackage{cleveref}
-    \usepackage{float}
-    \usepackage{bm}
-    \usepackage{calc}
-    \usepackage[font=small]{subfig}
-    \crefname{section}{\S}{\S\S}
-    \Crefname{section}{\S}{\S\S}
-    \crefname{table}{Table}{}
-    \crefname{figure}{Figure}{}
-    \crefname{algorithm}{Algorithm}{}
-    \crefname{equation}{}{}
-    \crefname{appendix}{App.}{}
-    \crefname{prop}{Proposition}{}
-    \crefformat{section}{\S#2#1#3}
-    \usepackage{todonotes}
-    \usepackage{microtype}
-    \usepackage{etoolbox}
-    \usepackage{tikz}
-    \usepackage{adjustbox}
-    \usepackage{tikz-dependency}
+chapters = defaultdict(str)
+for i, wordform in enumerate(sorted(chainnet.keys())):
 
-    \def\signed #1{{\leavevmode\unskip\nobreak\hfil\penalty50\hskip2em
-      \hbox{}\nobreak\hfil(#1)%
-      \parfillskip=0pt \finalhyphendemerits=0 \endgraf}}
+    word = chainnet[wordform]
 
-    \newsavebox\mybox
-    \newenvironment{aquote}[1]
-      {\savebox\mybox{#1}\begin{quote}}
-      {\signed{\usebox\mybox}\end{quote}}
+    title = wordform.upper()
+    if not word.known:
+        title += "\\textsuperscript{\\textcolor{Red}{$\\star$}}"
 
-    \usepackage{natbib}
-    \setcitestyle{authoryear, open={(},close={)}}
+    chapters[wordform[:2]] += f'\n\\section{{{title}}}\n'+word.get_tikz()+'\n'
 
-    \newcommand{\citeposs}[1]{\citeauthor{#1}'s (\citeyear{#1})}
-    \newcommand{\tabspace}{\addlinespace[0.7em]}
+for chapter_code, chapter_output in chapters.items():
 
-    \newcommand{\word}[1]{\textit{#1}}
-    \newcommand{\sense}[2]{\text{\word{#1}}{$_#2$}}
-    \newcommand{\sensebf}[2]{\textbf{\word{#1}}{$\bm{_#2}$}}
-    \newcommand{\synonym}[1]{\textit{#1}}
+    output += f"\n\\input{{latex/{chapter_code}}}"
+    save_text_block(f'bin/analysis/latex/{chapter_code}.tex', chapter_output)
 
-    \newcommand{\corecolour}{Brown}
-    \newcommand{\metonymycolour}{Bittersweet}
-    \newcommand{\metaphorcolour}{Purple}
-    \newcommand{\conduitcolour}{Gray}
+output += '\n\n\\end{document}'
+save_text_block('bin/analysis/chainnet.tex', output)
 
-    \newcommand{\corelabel}{Core}
-    \newcommand{\metonymylabel}{metonymy}
-    \newcommand{\metaphorlabel}{metaphor}
-    \newcommand{\conduitlabel}{Conduit}
-
-    \newcommand{\newfeature}[1]{#1}
-    \newcommand{\keptfeature}[1]{\textcolor{Green}{\newfeature{#1}}}
-    \usepackage[normalem]{ulem}
-    \newcommand{\lostfeature}[1]{\textcolor{Red}{\sout{\newfeature{#1}}}}
-    \newcommand{\modifiedfeature}[1]{\textcolor{Orange}{\newfeature{#1}}}
-
-    \title{
-    \Large {Annotation}\\
-    [10pt] 
-    }
-    \author{~~\vspace{-1em}}
-    \date{}
-
-    \pgfdeclarelayer{bg}    % declare background layer
-    \pgfsetlayers{bg,main}  % set the order of the layers (main is the standard layer)
-
-    \pgfkeys{%
-      /tikz/on layer/.code={
-        \pgfonlayer{#1}\begingroup
-        \aftergroup\endpgfonlayer
-        \aftergroup\endgroup
-      }
-    }
-
-    \newcommand{\defaultdepth}{0pt}
-    \tikzset{definition/.style={align=left, shape=rectangle,draw=black, font={\footnotesize}, fill=black!0!white}}
-    \tikzset{core_definition/.style={anchor=center, align=left, shape=rectangle,draw=\corecolour, font={\footnotesize}, label={[text depth=\defaultdepth,anchor=south west]north west:{\footnotesize{\textcolor{\corecolour}{\corelabel}}}}, fill=black!0!white, line width=1}}
-    \tikzset{metaphor_definition/.style={anchor=center, align=left, shape=rectangle,draw=\metaphorcolour, font={\footnotesize}, label={[text depth=\defaultdepth, anchor=south west]north west:{\footnotesize{\textcolor{\metaphorcolour}{\metaphorlabel}}}}, fill=black!0!white, line width=.3mm}}
-    \tikzset{metonymy_definition/.style={anchor=center, align=left, shape=rectangle,draw=\metonymycolour, font={\footnotesize}, label={[text depth=\defaultdepth,anchor=south west]north west:{\footnotesize{\textcolor{\metonymycolour}{\metonymylabel}}}}, fill=black!0!white, line width=.3mm}}
-    \tikzset{metaphorconduit_definition/.style={anchor=center, align=left, shape=rectangle,draw=\metaphorcolour, font={\footnotesize}, label={[text depth=\defaultdepth, anchor=south west]north west:{\footnotesize{\textcolor{\metaphorcolour}{\metaphorlabel}\textcolor{\conduitcolour}{{ }+{ }\conduitlabel}}}}, fill=black!0!white, line width=.3mm}}
-    \tikzset{metonymyconduit_definition/.style={anchor=center, align=left, shape=rectangle,draw=\metonymycolour, font={\footnotesize}, label={[text depth=\defaultdepth,anchor=south west]north west:{\footnotesize{\textcolor{\metonymycolour}{\metonymylabel}\textcolor{\conduitcolour}{{ }+{ }\conduitlabel}}}}, fill=black!0!white, line width=.3mm}}
-
-    \tikzset{derivation/.style={node distance = 1cm and .5cm}}
-
-    \tikzset{metaphor/.style={->, line width=.3mm, \metaphorcolour, rounded corners=2mm, on layer=bg}}
-    \tikzset{association/.style={->, line width=.3mm, \metonymycolour, on layer=bg}}
-    \tikzset{start/.style={->, line width=.3mm, \corecolour, on layer=bg}}
-    \tikzset{split/.style={--, dashed, line width=.3mm, Gray, on layer=bg}}
-
-
-    \begin{document}
-
-    \onecolumn
-    \maketitle'''
-
-    chainnet = open_pickle('bin/analysis/chainnet.pkl')
-
-    for wordform, word in chainnet.items():
-
-        output += f'\\section{{{wordform.upper()}}}'
-        output += '\n'+word.get_tikz()
-
-    output += '\n\\end{document}'
-    save_text_block('bin/analysis/chainnet.tex', output)
-
-    info('Done')
-
-if __name__ == "__main__":
-    main()
+info('Done')

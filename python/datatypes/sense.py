@@ -1,6 +1,6 @@
 from nltk.corpus.reader import WordNetError
 
-from python.common.common import safe_lemma_from_key, warn
+from python.common.common import safe_lemma_from_key, warn, tex_escape
 from python.datatypes.sense_label import SenseLabel
 from nltk.corpus import wordnet as wn
 
@@ -69,9 +69,9 @@ class Sense:
     #def get_tikz_box(self, pos_x, pos_y, width='3.5cm'):
     #    return f'\\node[{self.label.value}_definition, text width={width}{", dashed" if self.is_virtual else ""}] ({self.sense_id}) at ({pos_x},{pos_y}) {{{self.get_latex_sense_id()} {self.get_latex_definition()}}};\n'
 
-    def get_tikz_box(self, position_code, width='3.5cm'):
+    def get_tikz_box(self, position_code, width='2.5cm'):
 
-        return f'\\node[{self.label.value}{"conduit" if self.is_conduit() else ""}_definition, text width={width}{", dashed" if self.is_virtual else ""}] ({self.sense_id}) {position_code} {{{self.get_latex_sense_id(index_label=True)} {self.get_latex_definition()}}};\n'
+        return f'\\node[{self.label.value}_definition, text width={width}{", dashed" if self.is_virtual else ""}] ({self.sense_id}) {position_code} {{{self.get_latex_sense_id(index_label=True)} {self.get_latex_definition(example_limit=1, synonym_limit=3, word_limit=15)}}};\n'
 
     # def get_tikz_box(self, right_sense, x_step, pos_y, width='3.5cm'):
     #     return f'\\path let \\p1 = ({right_sense}.east) in node[{self.label.value}_definition, text width={width}{", dashed" if self.is_virtual else ""}] ({self.sense_id}) at (\\x1+{x_step},{pos_y}) {{{self.get_latex_sense_id()} {self.get_latex_definition()}}};\n'
@@ -101,21 +101,24 @@ class Sense:
         sense_id = f'{{{sense_id}}}'
 
         if index_label and not self.is_known:
-            sense_id += "^\\textcolor{Red}{\\star}"
+            sense_id += "^{\\textcolor{Red}{\\star}}"
 
         sense_id = f'\\sense{"bf" if index_label else ""}{{{self.word_string}}}{{{sense_id}}}'
 
         return sense_id
 
-    def get_latex_definition(self):
+    def get_latex_definition(self, synonym_limit=None, example_limit=None, word_limit=None):
         latex_definition = self.definition.strip()
+
+        # Escape characters
+        latex_definition = tex_escape(latex_definition)
 
         # Italicise the synonyms
         if latex_definition[0] == '[':
             latex_definition_fragments = latex_definition[1:].split(']')
             if len(latex_definition_fragments) > 1:
                 # Only italicise if it seems to fit
-                synonyms = latex_definition_fragments[0].split(', ')
+                synonyms = latex_definition_fragments[0].split(', ')[:synonym_limit]
                 latex_definition = '[' + ', '.join(
                     [f'\\synonym{{{synonym}}}' for synonym in synonyms]) + ']' + ']'.join(
                     latex_definition_fragments[1:])
@@ -127,11 +130,20 @@ class Sense:
         latex_definition_split = latex_definition.split('"')
         latex_definition = latex_definition_split[0]
         for i, part in enumerate(latex_definition_split[1:]):
+            if example_limit is not None:
+                if i == example_limit*2:
+                    break
             if i % 2 == 0:
                 latex_definition += '``'
             else:
                 latex_definition += "''"
             latex_definition += part
+
+        if word_limit is not None:
+            definition_frags = latex_definition.split()
+            if len(definition_frags) > word_limit:
+                definition_frags = definition_frags[:word_limit]
+                latex_definition = " ".join(definition_frags) + ' ...'
 
         return latex_definition
 
