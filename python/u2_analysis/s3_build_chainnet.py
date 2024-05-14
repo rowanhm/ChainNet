@@ -45,12 +45,12 @@ for queue_id, data in author_data.items():
             assert wordform in chainnet.keys()
             chainnet[wordform] = word_data
 
-edit_queues = sorted([q for q in author_data.keys() if 'edits' in q] + ['edits:0.9'], key=lambda x : float(x.split(':')[1]))
-assert len(edit_queues) > 0
+edit_queues = sorted([q for q in author_data.keys() if 'edits' in q] + ['edits:0.9'], key=lambda x : float(x.split(':')[1].replace('d', '.')))
+assert len(edit_queues) > 1
 
 for queue_id in edit_queues:
 
-    version = queue_id.split(':')[1]
+    version = queue_id.split(':')[1].replace('d', '.')
     changed = 0
 
     if queue_id in author_data.keys():
