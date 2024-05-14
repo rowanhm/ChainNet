@@ -2,22 +2,22 @@
 
 **There are three ways to access the ChainNet data:**
 * By downloading [this JSON file](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet.json). 
-This file contains of all of ChainNet is one place. 
+This file contains all of ChainNet is one place. 
 Details of its structure are given below.
 * By downloading one of three simplified versions, which contain only [metaphor](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_metaphor.json), [metonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_metonymy.json), or [homonymy](https://raw.githubusercontent.com/rowanhm/ChainNet/main/data/chainnet_simple/chainnet_homonymy.json).
 These simplified versions exclude split and virtual senses, and have been designed to make it easy to access all of the examples of each phenomena without having to extract them yourselves.
-* By looking at [this automatically-generated PDF](https://rowanhm.github.io/ChainNet/documentation/ChainNet_Data.pdf), which includes graphical representations of every word in ChainNet, but does not include the feature transformations.
-It can be useful if you want to quickly reference ChainNet annotation for a word.
+* By looking at [this automatically-generated PDF](https://rowanhm.github.io/ChainNet/documentation/ChainNet_Data.pdf), which includes a graphical representation of each word in ChainNet, but does not include the feature transformations.
+It can be useful if you want to reference the ChainNet annotation quickly for a word.
 
-In Python, each of these JSON files can be opened trivially using the `json` library, e.g.
+In Python, JSON files can be opened trivially using the `json` library, e.g.
 ```angular2html
 import json
 
-with open("chainnet.json", "r") as fp:
+with open("data/chainnet.json", "r") as fp:
     chainnet = json.load(fp)
 ```
 
-If you notice any mistakes in the data, or have any suggestions for future versions, please get in touch. 
+If you notice any mistakes in the data, or have suggestions for future versions, please get in touch. 
 
 ## Data Format
 
@@ -105,7 +105,7 @@ To run the homonymy analysis, you will need to put the file `within_pos_clusters
 ### Polysemy Parsing
 
 To run the polysemy parsing code, please first download the SensEmBert embeddings into `data/parsing` and unpack them. 
-Run stages one and two in `python/u3_parsing` to initialise the data for training.
+After this, run stages one and two in `python/u3_parsing` to initialise the data for training.
 
 > :warning: **At the time of writing (10/05/24), the SensEmBert website appears to have been infiltrated.** Historically, the embeddings could be downloaded [here](http://sensembert.org/resources/sensembert_data.tar.gz) (access with care).
 
