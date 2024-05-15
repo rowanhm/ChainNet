@@ -105,8 +105,9 @@ To run the homonymy analysis, you will need to put the file `within_pos_clusters
 ### Polysemy Parsing
 
 To run the polysemy parsing code, please first download the SensEmBert embeddings into `data/parsing` and unpack them. 
-After this, run stages one and two in `python/u3_parsing` to initialise the data for training.
 
 > :warning: **At the time of writing (10/05/24), the SensEmBert website appears to have been infiltrated.** Historically, the embeddings could be downloaded [here](http://sensembert.org/resources/sensembert_data.tar.gz) (access with care).
 
+After the embeddings are downloaded, run stages one and two in `python/u3_parsing` to initialise the data for training.
+You will need to have first run `python/u2_analysis/build_chainnet.py`, to build the necessary ChainNet version.
 If you want to recreate the results found in the paper, download the model checkpoints from [here](https://drive.google.com/file/d/15y1mFN7LykFIqBLkcBgUL1y4i28cTWMX/view?usp=sharing), put them in `bin/parsing/models`, then run stages four onwards in `python/u3_parsing`.
