@@ -62,6 +62,7 @@ for queue_id in edit_queues:
     info(f'Saving ChainNet v{version} with a total of {len(chainnet)} words ({changed} changed)')
     json_output = {
         'metadata': {
+            'resource': 'ChainNet',
             'author': "Rowan Hall Maudslay",
             'version': str(version)
         },

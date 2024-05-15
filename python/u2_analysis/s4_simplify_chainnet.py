@@ -99,17 +99,18 @@ info('Extracting types')
 
 info('Saving')
 
-def wrap_data(data):
+def wrap_data(data, name):
     return {
         'metadata': {
+            'resource': f'ChainNet-{name}',
             'author': "Rowan Hall Maudslay",
             'version': str(version)
         },
         'content': data
     }
 
-save_json('data/chainnet_simple/chainnet_metaphor.json', wrap_data(connections['metaphor']))
-save_json('data/chainnet_simple/chainnet_metonymy.json', wrap_data(connections['metonymy']))
-save_json('data/chainnet_simple/chainnet_homonymy.json', wrap_data(homonymy_data))
+save_json('data/chainnet_simple/chainnet_metaphor.json', wrap_data(connections['metaphor'], 'Metaphor'))
+save_json('data/chainnet_simple/chainnet_metonymy.json', wrap_data(connections['metonymy'], 'Metonymy'))
+save_json('data/chainnet_simple/chainnet_homonymy.json', wrap_data(homonymy_data, 'Homonymy'))
 
 info('Done')
