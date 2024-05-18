@@ -17,7 +17,23 @@ with open("data/chainnet.json", "r") as fp:
     chainnet = json.load(fp)
 ```
 
-If you notice any mistakes in the data, or have suggestions for future versions, please get in touch. 
+Any work that uses should ChainNet should cite [our LREC-COLING paper](https://aclanthology.org/2024.lrec-main.266/):
+```angular2html
+@inproceedings{maudslay-etal-2024-chainnet-structured,
+    title = "{C}hain{N}et: Structured Metaphor and Metonymy in {W}ord{N}et",
+    author = "Maudslay, Rowan Hall  and Teufel, Simone  and Bond, Francis  and Pustejovsky, James",
+    editor = "Calzolari, Nicoletta  and Kan, Min-Yen  and Hoste, Veronique  and Lenci, Alessandro  and Sakti, Sakriani and Xue, Nianwen",
+    booktitle = "Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)",
+    month = may,
+    year = "2024",
+    address = "Torino, Italy",
+    publisher = "ELRA and ICCL",
+    url = "https://aclanthology.org/2024.lrec-main.266",
+    pages = "2984--2996"
+}
+```
+
+If you notice any mistakes in the data, or have suggestions for future versions, please get in touch.
 
 ## Data Format
 
