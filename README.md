@@ -68,6 +68,17 @@ Finally, each feature is a dictionary has the following keys:
 * `source_feature_id` The unique ID of the feature which is being edited (if this feature is kept/lost/modified).
 * `source_feature_string` The string the feature which is being edited.
 
+## Mistakes
+
+If you spot a mistake, please let us know by submitting an issue.
+Alternatively, you can fix this mistake yourself and submit a pull request.
+This can be achieved by editing the `chainnet_edges.tsv` and (optionally) the `chainnet_virtuals.tsv` files in `data/working_files`.
+After making an edit, run `python/u4_updating/s2_sanity_check.py` to check that the edit is not malformed.
+Afterwards, run `python/u4_updating/s3_generate_json.py`.
+This regenerates the working version of the ChainNet `json` file, which can be found in `data/working_files`.
+We will periodically update the main file with this working version, when there have been enough updates.
+
+
 ## Reproduction
 
 This repository has five key folders:
